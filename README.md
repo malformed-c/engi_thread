@@ -6,9 +6,11 @@ Clone: `git clone --recurse-submodules --remote-submodules https://gitlab.com/ma
 
 > Debug build: `cmake -DCMAKE_BUILD_TYPE=Debug ..`
 
+Both `static` and `shared`
+
 `API` is in header file
 
-License LGPLv3 or later
+License `LGPLv3` or later
 
 *Malformed C*
 
