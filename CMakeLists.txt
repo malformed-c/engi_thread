@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.11)
 
 project(engi_thread LANGUAGES C)
 
-include_directories(../engi_common/)
+include_directories(engi_common/)
 
 set(CMAKE_C_FLAGS_DEBUG "-std=gnu2x -Og -Wall -Wextra -g3 -gdwarf-3 -fanalyzer -flto")
 set(CMAKE_C_FLAGS_RELEASE "-std=gnu2x -Ofast -flto")
