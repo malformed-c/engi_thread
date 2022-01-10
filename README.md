@@ -10,7 +10,7 @@ Both `static` and `shared`
 
 `API` is in header file
 
-License `LGPLv3` or later
+License `GPLv3` or later
 
 *Malformed C*
 
