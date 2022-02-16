@@ -5,7 +5,7 @@ project(engi_thread LANGUAGES C)
 
 include_directories(engi_common/)
 
-set(CMAKE_C_FLAGS_DEBUG "-std=gnu2x -Og -Wall -Wextra -g3 -gdwarf-3 -fanalyzer -flto")
+set(CMAKE_C_FLAGS_DEBUG "-std=gnu2x -Og -Wall -Wextra -g3 -gdwarf-3 -flto")
 set(CMAKE_C_FLAGS_RELEASE "-std=gnu2x -Ofast -flto")
 
 set(src ${PROJECT_NAME}.c)
@@ -15,12 +15,12 @@ set(static_library ${PROJECT_NAME}_static)
 set(shared_library ${PROJECT_NAME}_shared)
 
 add_library(${object_library} OBJECT ${src})
-set_property(TARGET ${object_library} PROPERTY POSITION_INDEPENDENT_CODE 1)
+set_property(TARGET ${object_library} PROPERTY POSITION_INDEPENDENT_CODE True)
 
 add_library(${static_library} STATIC $<TARGET_OBJECTS:${object_library}>)
 set_property(TARGET ${static_library} PROPERTY OUTPUT_NAME ${PROJECT_NAME})
-target_link_libraries(${static_library} pthread -static)
+target_link_libraries(${static_library} pthread)
 
 add_library(${shared_library} SHARED $<TARGET_OBJECTS:${object_library}>)
 set_property(TARGET ${shared_library} PROPERTY OUTPUT_NAME ${PROJECT_NAME})
-target_link_libraries(${shared_library} pthread -shared)
+target_link_libraries(${shared_library} pthread)
