@@ -25,3 +25,12 @@ target_link_libraries(${static_library} pthread)
 add_library(${shared_library} SHARED $<TARGET_OBJECTS:${object_library}>)
 set_property(TARGET ${shared_library} PROPERTY OUTPUT_NAME ${PROJECT_NAME})
 target_link_libraries(${shared_library} pthread)
+
+add_executable(${shared_library}_test main.c)
+target_link_libraries(${shared_library}_test ${shared_library})
+
+add_executable(${static_library}_test main.c)
+target_link_libraries(${static_library}_test ${static_library} -static)
+
+install(TARGETS ${shared_library} LIBRARY)
+install(TARGETS ${static_library} LIBRARY)

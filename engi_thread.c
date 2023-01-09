@@ -48,7 +48,7 @@ int engi_task_init(engi_task_t *task, void * func(void *), void *args)
 {
 	task->func = func;
 	task->args = args;
-	
+
 	return 0;
 }
 
