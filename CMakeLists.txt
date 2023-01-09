@@ -5,6 +5,7 @@ project(engi_thread LANGUAGES C)
 
 include_directories(${CMAKE_SOURCE_DIR}/../engi_common/)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_C_FLAGS_DEBUG "-std=gnu2x -Og -Wall -Wextra -g3 -gdwarf-3 -flto")
 set(CMAKE_C_FLAGS_RELEASE "-std=gnu2x -Ofast -flto")
 
