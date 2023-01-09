@@ -6,7 +6,7 @@
 
 #include "engi_thread.h"
 
-void * work_test()
+void * work_test(void *)
 {
 	static int c = 0;
 	printf("test %d\n", c++);
